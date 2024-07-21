@@ -21,7 +21,7 @@ class _SignupPageState extends State<SignupPage> {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:5000/signup'), // Replace with your API endpoint
+        Uri.parse('http://your_key_here/signup'), // Replace with your API endpoint
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
