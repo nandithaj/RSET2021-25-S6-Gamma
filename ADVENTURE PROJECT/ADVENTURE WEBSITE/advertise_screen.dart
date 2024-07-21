@@ -52,7 +52,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
 
   Future<void> fetchLocations() async {
     final response =
-        await http.get(Uri.parse('http://127.0.0.1:5000/locations'));
+        await http.get(Uri.parse('http://your_key_here/locations'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body) as List;
@@ -66,7 +66,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
 
   Future<void> fetchBusinessTypes() async {
     final response =
-        await http.get(Uri.parse('http://127.0.0.1:5000/business_type'));
+        await http.get(Uri.parse('http://your_key_here/business_type'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body) as List;
@@ -250,7 +250,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
     List<String> selectedScreenNames,
   ) async {
     try {
-      final url = Uri.parse('http://127.0.0.1:5000/calculate_cost');
+      final url = Uri.parse('http://your_key_here/calculate_cost');
       final response = await http.post(
         url,
         body: jsonEncode({
@@ -306,7 +306,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
     };
 
     try {
-      final url = Uri.parse('http://127.0.0.1:5000/booked_slots');
+      final url = Uri.parse('http://your_key_here/booked_slots');
       final response = await http.post(
         url,
         body: jsonEncode(requestBody),
@@ -358,7 +358,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
     }
 
     // Replace with your actual API endpoint for ad scheduling (should accept screen data)
-    final url = Uri.parse('http://127.0.0.1:5000/ad_schedule');
+    final url = Uri.parse('http://your_key_here/ad_schedule');
 
     final body = jsonEncode({
       'screens': selectedData, // Use the prepared "selectedData" list
@@ -401,7 +401,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
   Future<void> uploadImage(int userId) async {
     if (_imageFile == null) return; // Handle no image selected
 
-    final Uri url = Uri.parse('http://127.0.0.1:5000/upload');
+    final Uri url = Uri.parse('http://your_key_here/upload');
     var request = http.MultipartRequest('POST', url);
 
     // Extract file name from the image file path
