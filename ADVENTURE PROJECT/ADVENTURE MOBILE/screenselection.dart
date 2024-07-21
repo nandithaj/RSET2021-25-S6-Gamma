@@ -52,7 +52,7 @@ class _ScreenSelectionPageState extends State<ScreenSelectionPage> {
     final screenIdProvider = Provider.of<ScreenIdProvider>(context, listen: false);
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.1.4:5000/getscreenid?owner_id=$userId&screen_name=$screenName'),
+        Uri.parse('http://your_key_here/getscreenid?owner_id=$userId&screen_name=$screenName'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },
