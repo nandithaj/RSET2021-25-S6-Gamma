@@ -190,7 +190,7 @@ Row(
 
   Future<void> registerScreen(String screenName, String location, String businessType, String userId, int footfall, double baseRate, double peakHourMultiplier, TimeOfDay? peakHourStart, TimeOfDay? peakHourEnd) async {
   final response = await http.post(
-    Uri.parse('http://127.0.0.1:5000/newScreen'), // Replace with your actual backend URL
+    Uri.parse('http://your_key_here/newScreen'), // Replace with your actual backend URL
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
