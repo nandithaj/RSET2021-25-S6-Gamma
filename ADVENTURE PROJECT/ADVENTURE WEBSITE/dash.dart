@@ -207,7 +207,7 @@ class DashboardScreen extends StatelessWidget {
   }
 
   Future<int> _fetchScreenCount(int userId) async {
-    final url = Uri.parse('http://127.0.0.1:5000/regcount/$userId');
+    final url = Uri.parse('http://your_key_here/regcount/$userId');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -240,7 +240,7 @@ class DashboardScreen extends StatelessWidget {
   }
 
   Future<int> _fetchAdsPlayedCount(int userId) async {
-    final url = Uri.parse('http://127.0.0.1:5000/adsplayed/$userId');
+    final url = Uri.parse('http://your_key_here/adsplayed/$userId');
 
     final response = await http.get(url);
 
@@ -274,7 +274,7 @@ class DashboardScreen extends StatelessWidget {
   }
 
   Future<int> _fetchGrossFootfallCount(int userId) async {
-    final url = Uri.parse('http://127.0.0.1:5000/grossfootfallcount/$userId');
+    final url = Uri.parse('http://your_key_here/grossfootfallcount/$userId');
 
     final response = await http.get(url);
 
@@ -309,7 +309,7 @@ class DashboardScreen extends StatelessWidget {
   }
 
   Future<double> _fetchGrossCollection(int userId) async {
-    final url = Uri.parse('http://127.0.0.1:5000/grosscollection/$userId');
+    final url = Uri.parse('http://your_key_here/grosscollection/$userId');
 
     final response = await http.get(url);
 
