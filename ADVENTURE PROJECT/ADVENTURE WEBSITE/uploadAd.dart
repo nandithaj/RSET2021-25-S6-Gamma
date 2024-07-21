@@ -29,7 +29,7 @@ class _UploadAdPageState extends State<UploadAdPage> {
   Future<void> uploadImage(String userId) async {
     if (_imageFile == null) return; // Handle no image selected
 
-    final Uri url = Uri.parse('http://127.0.0.1:5000/upload'); // Replace with your backend URL
+    final Uri url = Uri.parse('http://your_key_here/upload'); // Replace with your backend URL
     var request = http.MultipartRequest('POST', url);
 
     // Add image and user ID data
