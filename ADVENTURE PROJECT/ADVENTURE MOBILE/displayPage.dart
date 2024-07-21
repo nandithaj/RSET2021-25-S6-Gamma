@@ -42,7 +42,7 @@ class _DisplayAdImageState extends State<DisplayAdImage> {
     
     if (screenId == null) return; // Handle no screen ID
 
-    final Uri url = Uri.parse('http://192.168.1.4:5000/get-ad/$screenId'); // Replace with your backend URL
+    final Uri url = Uri.parse('http://your_key_here/get-ad/$screenId'); // Replace with your backend URL
     final response = await http.get(url);
     
     if (response.statusCode == 200) {
@@ -53,7 +53,7 @@ class _DisplayAdImageState extends State<DisplayAdImage> {
         if (newVideoUrl != null && newVideoUrl != _videoUrl) {
           _videoUrl = newVideoUrl;
           _controller?.dispose(); // Dispose the existing controller if it exists
-          _controller = VideoPlayerController.network('http://192.168.1.4:8080/$_videoUrl');
+          _controller = VideoPlayerController.network('http://your_key_here/$_videoUrl');
           _initializeVideoPlayerFuture = _controller!.initialize().then((_) {
             _controller!.setLooping(true);
             _controller!.play();
