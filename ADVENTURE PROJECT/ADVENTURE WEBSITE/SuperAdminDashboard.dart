@@ -48,7 +48,7 @@ class SuperAdminDashboard extends StatelessWidget {
 
   Future<Map<String, dynamic>> _fetchHighestSpender() async {
     final url = Uri.parse(
-        'http://127.0.0.1:5000/highest_spender'); // Assuming highest_spender endpoint
+        'http://your_key_here/highest_spender'); // Assuming highest_spender endpoint
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -189,7 +189,7 @@ class SuperAdminDashboard extends StatelessWidget {
 
   Future<List<String>> _fetchLocations() async {
     final url = Uri.parse(
-        'http://127.0.0.1:5000/locations'); // Assuming locations endpoint
+        'http://your_key_here/locations'); // Assuming locations endpoint
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -238,7 +238,7 @@ class SuperAdminDashboard extends StatelessWidget {
   }
 
   Future<List<Map<String, dynamic>>> _fetchUserCosts() async {
-    final url = Uri.parse('http://127.0.0.1:5000/user_costs');
+    final url = Uri.parse('http://your_key_here/user_costs');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -283,7 +283,7 @@ class SuperAdminDashboard extends StatelessWidget {
 
   Future<int> _fetchTotalCount() async {
     final url = Uri.parse(
-        'http://127.0.0.1:5000/usercount'); // Assuming usercount endpoint
+        'http://your_key_here/usercount'); // Assuming usercount endpoint
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -317,7 +317,7 @@ class SuperAdminDashboard extends StatelessWidget {
   }
 
   Future<int> _fetchScreenCount(int userId) async {
-    final url = Uri.parse('http://127.0.0.1:5000/regcount1');
+    final url = Uri.parse('http://your_key_here/regcount1');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -351,7 +351,7 @@ class SuperAdminDashboard extends StatelessWidget {
   }
 
   Future<double> _fetchGrossCollection(int userId) async {
-    final url = Uri.parse('http://127.0.0.1:5000/grosscollection1');
+    final url = Uri.parse('http://your_key_here/grosscollection1');
 
     final response = await http.get(url);
 
